@@ -75,7 +75,8 @@ async function main() {
   console.log(`Drafts in client language: ${langOk}/${drafts.length}`);
   console.log(`Drafts free of new-product pitch: ${pitchFree}/${drafts.length}`);
   console.log(`Model proposals blocked by guardrails: ${blocked.length}${blocked.length ? "  (" + blocked.map((b) => `${b.client_id}:${b.type}`).join(", ") + ")" : ""}`);
-  console.log(`Model errors: ${run.decisions.filter((d) => d.model_error).length}`);
+  const errs = run.decisions.filter((d) => d.model_error);
+  console.log(`Model errors: ${errs.length}${errs.length ? "  (" + errs.map((d) => `${d.client_id}: ${d.model_error}`).join("; ") + ")" : ""}`);
   const lat = run.decisions.filter((d) => d.latency_ms).map((d) => d.latency_ms!);
   console.log(`Latency p50 ${(lat.sort((a, b) => a - b)[Math.floor(lat.length / 2)] / 1000).toFixed(1)}s · tokens ${run.usage.input_tokens} in / ${run.usage.output_tokens} out (${run.usage.cache_read_input_tokens} cached)`);
   console.log(`Est. cost $${((run.usage.input_tokens * 2 + run.usage.output_tokens * 10) / 1e6).toFixed(3)} (Sonnet 5.5: $2 in / $10 out per MTok)`);

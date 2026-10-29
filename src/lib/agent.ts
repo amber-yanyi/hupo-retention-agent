@@ -12,7 +12,7 @@ const USE_OPENROUTER = !!process.env.OPENROUTER_API_KEY;
 export const MODEL = process.env.AGENT_MODEL ?? (USE_OPENROUTER ? "anthropic/claude-sonnet-5.5" : "claude-sonnet-5-5");
 // Decisions are short and well-specified; low effort keeps a 34-client run fast.
 const EFFORT = (process.env.AGENT_EFFORT ?? "low") as "low" | "medium" | "high";
-const CONCURRENCY = 8;
+const CONCURRENCY = 6;
 
 const ACTION_TYPES = Object.keys(ACTION_CATALOG) as [ActionType, ...ActionType[]];
 const TARGETS = Object.keys(ESCALATION_LABEL) as [EscalationTarget, ...EscalationTarget[]];
@@ -57,7 +57,9 @@ JUDGMENT
 - Lapsed policies: draft a reinstatement outreach for the advisor (reinstatement may require a health declaration — say so in talking points, don't promise reinstatement).
 - When a client has already committed to pay by a date (PROMISE_TO_PAY), do not chase; create a task dated the day after the promised date to verify.
 - Status-unverified policies: task the advisor to verify with policy admin today; no client contact.
-- Escalate when a guard requires it, or when you see something a human must judge. Inherited clients and overdue reviews warrant an introduction / review-booking draft when allowed.
+- Escalate when a guard requires it, or when you see something a human must judge.
+- The approval queue is the advisor's scarcest resource — precision over volume. draft_retention_outreach is for retention only: reinstating a lapsed policy, or a high-value at-risk premium where a personal note adds what the template can't. Inherited clients and overdue reviews get ONE create_advisor_task ("Introduce yourself / book review") with talking points — not a draft.
+- Generic coverage gaps (GAP_HOSPITAL, GAP_CI) are talking points for a review task, never a cross-sell brief on their own.
 - Drafts: short, warm, WhatsApp-length, in the client's preferred language with an English version, signed with the approver's first name. No pressure tactics, no guarantees.
 - Be economical: 0-4 actions, one task can cover several items. Empty actions is fine when nothing is worth doing.
 - priority: critical = lapse (or possible lapse) within 3 days; high = premium at risk within 14 days or lapsed; medium = review/cross-sell opportunity; low = nothing material.`;
@@ -125,8 +127,23 @@ async function decide(book: Book, c: Client, env: Envelope, usage: Usage): Promi
   return response.parsed_output;
 }
 
+// Retry transient failures (network drops, 429, 5xx) with backoff; anything else surfaces.
+async function fetchWithRetry(url: string, init: RequestInit, attempts = 4): Promise<Response> {
+  for (let i = 1; ; i++) {
+    try {
+      const res = await fetch(url, init);
+      if ((res.status === 429 || res.status >= 500) && i < attempts) throw new Error(`HTTP ${res.status}`);
+      return res;
+    } catch (err) {
+      const cause = (err as { cause?: { code?: string } }).cause?.code;
+      if (i >= attempts) throw new Error(`${err instanceof Error ? err.message : err}${cause ? ` (${cause})` : ""} after ${attempts} attempts`);
+      await new Promise((r) => setTimeout(r, 500 * 2 ** i));
+    }
+  }
+}
+
 async function decideOpenRouter(user: string, usage: Usage) {
-  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+  const res = await fetchWithRetry("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
       authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
@@ -228,8 +245,10 @@ export async function runAgent(book: Book, scope: string, scopeLabel: string, cl
   emit({ type: "run_started", run: { id: run.id, scope, scope_label: scopeLabel, model: MODEL }, total: clients.length });
 
   const queue = [...clients];
-  async function worker() {
-    for (let c = queue.shift(); c; c = queue.shift()) {
+  const deferred: Client[] = [];
+  async function worker(final = false) {
+    const source = final ? deferred : queue;
+    for (let c = source.shift(); c; c = source.shift()) {
       emit({ type: "client_started", client_id: c.client_id, client_name: c.full_name });
       const env = buildEnvelope(book, c);
       const t0 = Date.now();
@@ -245,8 +264,10 @@ export async function runAgent(book: Book, scope: string, scopeLabel: string, cl
           decision = { client_id: c.client_id, client_name: c.full_name, priority: d.priority, summary: d.summary, situation: d.situation, envelope: env, model_called: true, latency_ms: Date.now() - t0 };
           actions = enforce(book, run, c, env, d.actions);
         } catch (err) {
-          // Fail safe: if the model can't decide, nothing goes to the client; a human reviews.
           const message = err instanceof Error ? err.message : String(err);
+          // Network drops under concurrency: retry once more at the end, one at a time.
+          if (!final && /fetch failed|ECONNRESET|HTTP 5\d\d|HTTP 429/.test(message)) { deferred.push(c); continue; }
+          // Fail safe: if the model can't decide, nothing goes to the client; a human reviews.
           decision = { client_id: c.client_id, client_name: c.full_name, priority: "high", summary: "Agent could not decide — routed for manual review", situation: message, envelope: env, model_called: true, model_error: message, latency_ms: Date.now() - t0 };
           actions = enforce(book, run, c, env, [{ type: "escalate", policy_id: null, title: "Manual review — agent decision failed", rationale: message, channel: null, message_native: null, message_english: null, talking_points: [], escalate_to: "servicing_advisor", due_date: AS_OF }]);
         }
@@ -262,7 +283,8 @@ export async function runAgent(book: Book, scope: string, scopeLabel: string, cl
       emit({ type: "client_done", decision, actions });
     }
   }
-  await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+  await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
+  await worker(true);
   run.finished_at = new Date().toISOString();
   emit({ type: "run_finished", run });
   return run;

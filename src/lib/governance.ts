@@ -71,6 +71,7 @@ export const RULES: { code: string; label: string; when: string; effect: string 
   { code: "PROMISE_TO_PAY", label: "Client already committed to pay", when: "Recent lapse follow-up with a promised date before the lapse date", effect: "No reminder before the promised date. Task to verify on the day after." },
   { code: "RECENTLY_REMINDED", label: "Contact frequency cap", when: "Payment reminder or lapse follow-up in the last 7 days", effect: "No further automated reminder." },
   { code: "STATUS_UNVERIFIED", label: "Policy status unverified", when: "Status in force but due date passed with no payment", effect: "No automated contact on that policy. Advisor verifies with policy admin." },
+  { code: "CROSS_SELL_TRIGGER", label: "Cross-sell needs a concrete trigger", when: "No life event and no dependants-without-life-cover signal", effect: "No cross-sell brief. A generic coverage gap goes into review talking points, not the approval queue." },
   { code: "DUPLICATE_RECORD", label: "Duplicate client record", when: "Same name + DOB on two IDs", effect: "Most restrictive consent applies. Data team merges at source." },
 ];
 
@@ -193,6 +194,9 @@ export function buildEnvelope(book: Book, c: Client): Envelope {
 
   const blocked = new Map<ActionType, string[]>();
   for (const g of guards) for (const a of g.blocks) blocked.set(a, [...(blocked.get(a) ?? []), g.label]);
+  // Precision over volume: a coverage gap alone is true of most clients and is not a reason to sell.
+  if (!signals.some((s) => s.code === "LIFE_EVENT" || s.code === "GAP_LIFE"))
+    blocked.set("propose_cross_sell", [...(blocked.get("propose_cross_sell") ?? []), "No concrete trigger (CROSS_SELL_TRIGGER)"]);
   if (!approver) for (const a of ADVISORY) blocked.set(a, [...(blocked.get(a) ?? []), "No licensed advisor to approve"]);
   if (!reminderEligibility.some((r) => r.eligible) && !blocked.has("send_payment_reminder"))
     blocked.set("send_payment_reminder", ["No grace-period policy eligible for an automated reminder"]);
