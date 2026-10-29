@@ -4,7 +4,7 @@
 
 ## What I built, and why this first
 
-An agent that works one advisor's book end to end: **rules → model decision → guardrail re-check → execute → queue → hand off**. The work queue shows every outcome in one of three lanes: *done autonomously*, *needs your approval*, or *handed to a human*.
+An agent that works one advisor's book end to end: **rules → model decision → guardrail re-check → execute → queue → hand off**. The work queue shows every outcome in one of three lanes: *done autonomously*, *needs your approval*, or *handed to a human*. In production the loop would run on its own, nightly after the policy-admin batch and immediately on a payment-failure event. The prototype's "Run agent" button stands in for that trigger. Re-runs are idempotent: a reminder the agent already sent is not sent again.
 
 **Retention runs the full loop; cross-sell stops at a recommendation.** Retention comes first because the money is already on the books, the deadline is hard (lapse on day 31), and the work is *servicing* rather than *advice*, so the agent can safely act on its own. On this book that means SGD 91k of annual premium in grace for A01 alone, and one policy lapsing in two days. Cross-sell is regulated advice in Singapore, so the agent only writes an advisor-only brief, and only when there is a concrete trigger (a life event, or dependants with no life cover). A coverage gap alone describes most clients, so it doesn't count. That rule took A01's approval queue from 40 items to 6. The advisor's attention is the scarcest resource, so I chose precision over volume.
 
