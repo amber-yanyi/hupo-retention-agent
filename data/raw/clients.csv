@@ -1,0 +1,120 @@
+client_id,full_name,dob,gender,marital_status,dependants,occupation,annual_income_band_sgd,smoker,preferred_language,marketing_consent,do_not_call,servicing_advisor_id,last_annual_review_date,life_event_note,client_status
+C0001,Goh Yong Jia,1999-08-03,F,married,0,Doctor,30-60k,N,EN,Y,N,A01,2026-01-20,Reassigned from departed advisor (Aug 2026),active
+C0002,Lee Ling Zhi,1975-12-17,F,married,1,Lawyer,<30k,N,ZH,Y,N,A06,2024-07-15,Diagnosed with hypertension (per servicing call),active
+C0003,Low Mei Hui,1987-10-25,M,single,0,Business Owner,30-60k,Y,ZH,Y,N,A01,2025-07-13,Started own business,active
+C0004,Chua Qi Kai,1977-06-22,F,married,0,Homemaker,<30k,N,TA,Y,N,A01,2024-08-26,Reassigned from departed advisor (Aug 2026),active
+C0005,Aisyah bin Hassan,1985-09-23,F,married,1,Doctor,30-60k,N,EN,Y,N,A01,2024-08-19,Reassigned from departed advisor (Aug 2026),active
+C0006,Low Ming Qi,1986-04-25,F,single,2,Accountant,100-150k,N,EN,Y,N,A01,2025-01-16,Reassigned from departed advisor (Aug 2026),active
+C0007,Chan Hui Ling,1979-06-10,F,married,2,Nurse,100-150k,N,MS,Y,N,A06,2026-03-10,,active
+C0008,Chua Mei Yan,1993-05-22,M,single,2,Bank Officer,30-60k,N,EN,Y,N,A03,2024-10-04,Bought first HDB flat (Jun 2026),active
+C0009,Chua Ling Jia,1968-05-09,F,single,2,Software Engineer,60-100k,Y,EN,Y,N,A08,2024-12-06,,active
+C0010,Lee Hui Kai,1987-03-20,F,married,2,Nurse,100-150k,N,ZH,N,Y,A05,,,active
+C0011,Lim Li Hao,1977-12-09,M,married,0,Admin Executive,150-250k,N,ZH,Y,N,A01,2025-10-19,Reassigned from departed advisor (Aug 2026),active
+C0012,Ang Yong Ming,1979-10-22,M,married,0,Doctor,60-100k,N,ZH,Y,N,A01,2024-05-06,Child entering university 2027,active
+C0013,Ahmad binti Yusof,1975-03-30,M,single,0,Business Owner,100-150k,N,EN,Y,N,A03,2025-01-31,,active
+C0014,Priya Krishnan,1971-09-18,F,divorced,1,Civil Servant,150-250k,Y,EN,Y,N,A01,,,active
+C0015,Rajesh Subramaniam,1978-11-25,M,single,0,Teacher,>250k,N,ZH,Y,N,A03,2025-12-31,,active
+C0016,Lee Qi Xin,1985-12-08,F,single,2,Engineer,150-250k,N,EN,N,N,A06,2025-01-29,,active
+C0017,Ang Hui Wei,1992-01-17,M,single,0,Doctor,60-100k,N,EN,Y,N,A01,2025-02-25,,active
+C0018,Arun Menon,1970-12-25,M,married,1,Grab Driver,60-100k,N,MS,Y,N,A05,2026-01-06,Death claim paid Jul 2026 — see policy P0268,deceased
+C0019,Siti binti Osman,1972-12-16,F,widowed,0,Logistics Supervisor,30-60k,N,ZH,N,Y,A04,2026-03-26,,active
+C0020,Rajesh Menon,1983-10-08,M,married,0,Software Engineer,60-100k,N,EN,Y,N,A01,2025-11-28,Reassigned from departed advisor (Aug 2026),active
+C0021,Ng Wei Jun,1981-09-19,F,married,1,Engineer,60-100k,N,ZH,N,N,A08,,,active
+C0022,Nur binti Yusof,1989-08-02,F,single,0,Accountant,>250k,Y,MS,Y,N,A08,,,active
+C0023,Ong Wei Li,1998-08-16,M,married,2,Bank Officer,60-100k,N,EN,N,Y,A08,2026-05-18,,active
+C0024,Syafiq binti Yusof,1985-03-24,M,single,1,Logistics Supervisor,60-100k,N,EN,Y,N,A02,2026-08-07,,active
+C0025,Tan Zhi Hao,1990-06-08,M,divorced,1,Bank Officer,30-60k,Y,ZH,Y,N,A02,2026-08-01,,active
+C0026,Syafiq binti Yusof,1969-05-04,M,single,2,Engineer,30-60k,N,MS,N,Y,A05,,Child entering university 2027,active
+C0027,Emily D'Souza,1989-01-26,F,widowed,2,Business Owner,60-100k,N,EN,Y,N,A03,2026-05-16,,active
+C0028,Teo Ling Ling,1968-09-18,F,married,0,Logistics Supervisor,60-100k,N,ZH,Y,N,A01,2025-01-15,,active
+C0029,Lee Ming Hui,1979-08-15,M,single,1,Marketing Executive,60-100k,N,EN,Y,N,A05,2025-10-10,New baby (Mar 2026),active
+C0030,Rajesh Subramaniam,1970-11-13,M,widowed,0,Accountant,30-60k,N,EN,Y,N,A01,2024-05-08,Started own business,active
+C0031,Ahmad bin Hassan,1994-01-19,M,married,0,Homemaker,<30k,N,EN,Y,N,A01,2026-05-05,Reassigned from departed advisor (Aug 2026),active
+C0032,Chua Li Yan,1983-06-04,F,married,0,Bank Officer,30-60k,Y,EN,Y,N,A03,2024-08-11,,active
+C0033,Syafiq binti Yusof,1986-10-01,M,married,0,Marketing Executive,60-100k,Y,EN,Y,N,A04,2024-12-25,Bought first HDB flat (Jun 2026),active
+C0034,Irfan binti Osman,1999-02-01,M,married,2,Grab Driver,60-100k,N,MS,N,N,A01,,Reassigned from departed advisor (Aug 2026),active
+C0035,Rachel D'Souza,1978-01-25,F,married,2,Civil Servant,100-150k,Y,EN,Y,N,A01,2026-01-25,Reassigned from departed advisor (Aug 2026),active
+C0036,Anjali Krishnan,1996-11-28,F,single,0,Homemaker,<30k,N,EN,Y,N,A01,,Reassigned from departed advisor (Aug 2026),active
+C0037,Teo Yan Xin,1987-04-27,F,married,1,Marketing Executive,100-150k,N,ZH,Y,N,A01,,Reassigned from departed advisor (Aug 2026),active
+C0038,Lim Zhi Hui,1971-09-26,F,single,2,Engineer,60-100k,Y,EN,N,N,A01,2024-07-15,Reassigned from departed advisor (Aug 2026),active
+C0039,Andrew D'Souza,1995-08-18,M,divorced,2,Sales Manager,60-100k,N,EN,Y,N,A08,,,active
+C0040,Divya Subramaniam,1995-03-25,F,single,0,Grab Driver,60-100k,N,EN,Y,N,A01,2026-03-11,Reassigned from departed advisor (Aug 2026),active
+C0041,Koh Kai Jun,1969-05-15,F,married,0,Business Owner,100-150k,Y,EN,Y,N,A05,2025-11-30,,active
+C0042,Tan Yong Li,1964-09-27,M,single,0,Hawker Stall Owner,30-60k,N,EN,Y,N,A03,2026-08-03,,active
+C0043,Aina binti Yusof,1977-03-24,F,married,1,Grab Driver,60-100k,Y,ZH,Y,N,A03,,,active
+C0044,Yeo Jun Yan,1982-05-18,M,divorced,2,Sales Manager,60-100k,N,EN,Y,N,A08,2024-12-15,,active
+C0045,Koh Mei Ling,1983-07-03,F,married,2,Admin Executive,60-100k,N,EN,Y,N,A04,2026-04-19,,active
+C0046,Koh Kai Xin,1991-09-16,F,married,2,Property Agent,30-60k,N,EN,N,N,A01,2025-06-28,,active
+C0047,Daniel Rozario,1985-08-13,M,married,0,Grab Driver,<30k,N,ZH,Y,N,A08,2025-11-22,,active
+C0048,Farah binti Osman,1954-09-30,F,single,0,Retired,<30k,N,EN,Y,N,A01,,Reassigned from departed advisor (Aug 2026),active
+C0049,Tan Xin Kai,1982-12-18,M,single,2,Sales Manager,60-100k,N,MS,N,Y,A01,,Reassigned from departed advisor (Aug 2026),active
+C0050,Hannah Santos,1978-05-26,F,single,1,Property Agent,60-100k,N,EN,Y,N,A03,2025-12-31,Diagnosed with hypertension (per servicing call),active
+C0051,Ong Xin Zhi,1978-10-06,F,married,2,Logistics Supervisor,60-100k,N,EN,Y,N,A02,2025-03-27,,active
+C0052,Claire Fernandez,1991-11-20,F,single,0,Civil Servant,60-100k,N,EN,Y,N,A05,2024-12-09,,active
+C0053,Teo Ming Xin,1984-12-15,M,divorced,0,Property Agent,60-100k,Y,ZH,Y,N,A02,2026-08-04,,active
+C0054,Tan Jia Li,1965-03-15,M,married,1,Doctor,60-100k,Y,ZH,Y,N,A06,2026-06-04,,active
+C0055,Zulkifli bin Abdullah,1989-01-04,M,divorced,1,Teacher,100-150k,N,EN,Y,N,,2026-07-26,,active
+C0056,Goh Yong Mei,1985-11-18,M,married,1,Marketing Executive,>250k,N,ZH,Y,N,A03,2025-07-28,,active
+C0057,Koh Zhi Jia,1972-10-22,F,married,1,Lawyer,<30k,Y,ZH,Y,N,A04,2024-09-22,,active
+C0058,Chan Xin Li,1989-01-14,M,married,2,Sales Manager,150-250k,Y,ZH,Y,N,A06,2025-08-05,,active
+C0059,Teo Jia Hao,1982-11-08,F,married,2,Admin Executive,30-60k,N,EN,N,N,,2025-05-01,,active
+C0060,Chan Xin Yong,1967-11-03,F,single,1,Chef,60-100k,N,EN,Y,N,,2026-06-15,,active
+C0061,Wong Jia Mei,1962-03-08,M,single,0,Logistics Supervisor,>250k,N,EN,Y,N,A02,2025-09-10,,active
+C0062,Daniel Santos,1956-11-13,M,married,1,Business Owner,100-150k,N,EN,Y,N,A04,2025-12-31,,active
+C0063,Claire Rozario,1990-09-01,F,single,2,Grab Driver,60-100k,N,ZH,Y,N,A01,2024-09-23,,active
+C0064,Ang Yong Hui,1982-09-25,F,single,1,Software Engineer,60-100k,Y,EN,Y,N,A04,2024-07-22,,active
+C0065,Low Qi Hao,1997-09-19,M,married,0,Marketing Executive,100-150k,N,EN,Y,N,A01,2026-05-07,,active
+C0066,Chua Jia Qi,1994-08-27,F,single,2,Sales Manager,60-100k,Y,EN,Y,N,A01,2024-10-19,,active
+C0067,Ahmad bin Ismail,1968-09-21,M,married,0,Civil Servant,30-60k,N,EN,Y,N,A04,2026-06-30,,active
+C0068,Lee Ling Xin,1981-12-17,F,married,0,Admin Executive,100-150k,Y,ZH,Y,N,A02,2024-07-09,,active
+C0069,Ong Hui Hui,1988-08-04,M,married,0,Sales Manager,60-100k,N,EN,Y,N,A06,2024-07-09,,active
+C0070,Chua Yan Kai,1982-09-19,M,single,3,Teacher,60-100k,N,EN,Y,N,A02,2025-08-03,,active
+C0071,Sim Li Jia,1990-08-16,F,single,0,Software Engineer,>250k,N,ZH,Y,N,A05,2025-09-22,,active
+C0072,Daniel Rozario,1974-10-12,M,married,0,Sales Manager,150-250k,N,EN,Y,N,A06,2026-06-09,,active
+C0073,Ang Ling Hao,1970-11-10,F,married,1,Teacher,100-150k,Y,ZH,Y,N,A06,2024-12-14,,active
+C0074,Yeo Kai Hao,1981-05-15,M,single,0,Property Agent,<30k,N,EN,N,N,,,CI claim paid Aug 2026 (see policy notes),active
+C0075,Zulkifli binti Rahman,1980-02-18,M,single,3,Teacher,150-250k,N,ZH,N,N,,2024-03-14,,active
+C0076,Chua Qi Hao,1994-12-06,F,single,0,Software Engineer,<30k,N,EN,Y,N,,,,active
+C0077,Teo Hao Zhi,1985-12-20,M,single,0,Lawyer,<30k,N,EN,Y,N,,2026-05-03,,active
+C0078,Teo Ling Hao,1978-11-15,M,married,1,Grab Driver,<30k,Y,EN,Y,N,A05,2024-06-20,,active
+C0079,Aina binti Rahman,1970-03-09,F,married,0,Property Agent,100-150k,N,MS,Y,N,,2025-11-08,,active
+C0080,Teo Yong Ming,1991-06-06,M,single,3,Doctor,100-150k,N,EN,Y,N,A05,2025-08-19,New baby (Mar 2026),active
+C0081,Teo Wei Jun,1984-04-18,F,married,2,Accountant,30-60k,N,EN,Y,N,A01,2025-01-07,Got married (Jan 2026),active
+C0082,Goh Ming Hui,1998-06-03,M,married,0,Marketing Executive,100-150k,N,ZH,Y,N,A06,2024-04-09,Parent moved into household,active
+C0083,Yeo Ming Mei,1985-11-20,M,divorced,1,Homemaker,<30k,N,ZH,Y,N,,2024-10-10,,active
+C0084,Teo Mei Ming,1978-11-29,M,single,0,Marketing Executive,>250k,N,EN,Y,N,A03,2026-06-12,,active
+C0085,Marcus Pereira,1990-06-02,M,married,2,Doctor,60-100k,N,EN,Y,N,A01,2024-10-20,Started own business,active
+C0086,Lee Jun Xin,1992-03-26,F,married,1,Nurse,100-150k,N,EN,Y,N,A02,2025-12-18,Started own business,active
+C0087,Low Yan Jia,1978-07-28,F,married,2,Admin Executive,<30k,N,ZH,Y,N,A02,2025-06-25,Diagnosed with hypertension (per servicing call),active
+C0088,Ng Yong Kai,1989-01-06,F,single,1,Teacher,60-100k,N,ZH,Y,N,A08,2025-01-25,,active
+C0089,Ng Kai Jia,1985-08-22,F,married,2,Bank Officer,150-250k,N,ZH,N,N,A01,2025-09-20,Child entering university 2027,active
+C0090,Sim Wei Jun,1983-12-28,F,widowed,1,Hawker Stall Owner,60-100k,N,EN,Y,N,,,,active
+C0091,Ong Jia Jun,1977-12-04,F,married,3,Civil Servant,150-250k,N,ZH,Y,N,A02,2025-03-18,,active
+C0092,Rajesh Pillai,1957-11-23,M,married,0,Retired,<30k,N,EN,Y,N,,,,active
+C0093,Lim Mei Qi,1988-02-02,F,married,0,Business Owner,<30k,N,ZH,Y,N,A01,2025-08-31,,active
+C0094,Zulkifli binti Rahman,1982-01-25,M,single,1,Logistics Supervisor,60-100k,N,EN,Y,N,A08,,,active
+C0095,Ng Wei Yong,1975-02-25,F,single,0,Bank Officer,100-150k,N,EN,Y,N,,2026-02-16,,active
+C0096,Lee Jia Ming,1970-07-09,M,single,0,Chef,30-60k,Y,ZH,Y,N,A04,,,active
+C0097,Chua Yan Hui,1980-06-16,F,married,0,Homemaker,<30k,N,EN,Y,N,A06,2025-06-10,,active
+C0098,Lim Zhi Kai,1985-09-09,M,single,0,Doctor,30-60k,N,EN,Y,N,A03,2024-09-07,Retiring end 2026,active
+C0099,Teo Wei Jun,1973-11-17,F,married,0,Chef,100-150k,N,ZH,Y,N,A01,,,active
+C0100,Sim Li Ming,1985-10-20,M,single,0,Admin Executive,100-150k,N,EN,Y,N,A06,2026-04-19,,active
+C0101,Chua Yan Jun,1968-06-04,M,single,1,Logistics Supervisor,>250k,N,ZH,Y,N,A08,2025-09-15,Parent moved into household,active
+C0102,Nadia binti Rahman,1973-01-08,F,divorced,2,Homemaker,<30k,N,EN,Y,N,,2026-07-06,,active
+C0103,Wong Jia Hao,1989-04-02,F,single,0,Doctor,100-150k,N,EN,Y,N,A03,,,active
+C0104,Irfan binti Osman,1968-06-10,M,divorced,0,Software Engineer,30-60k,N,EN,N,Y,A01,,,active
+C0105,Tan Jia Zhi,1973-11-15,M,married,0,Grab Driver,30-60k,Y,EN,Y,N,,,,active
+C0106,Yeo Li Yan,1986-05-08,M,single,2,Business Owner,30-60k,N,ZH,Y,N,A01,2025-06-17,,active
+C0107,Suresh Nair,1967-07-24,M,divorced,2,Marketing Executive,60-100k,N,ZH,Y,N,A05,2024-03-05,Retiring end 2026,active
+C0108,Ong Jia Mei,1970-01-28,M,married,0,Software Engineer,30-60k,N,MS,Y,N,A05,2025-09-02,,active
+C0109,Siti binti Osman,1963-09-07,F,married,0,Admin Executive,30-60k,N,EN,Y,N,A01,2026-05-07,,active
+C0110,Hannah D'Souza,1968-06-10,F,single,2,Property Agent,30-60k,N,EN,Y,N,A06,2025-06-20,,active
+C0111,Aina binti Osman,1990-11-24,F,single,2,Admin Executive,<30k,N,EN,Y,N,A01,2024-08-22,,active
+C0112,Muhammad binti Osman,1982-08-09,M,single,0,Logistics Supervisor,60-100k,N,EN,N,Y,,2025-04-16,,active
+C0113,Ang Hui Kai,1978-12-13,F,married,1,Chef,60-100k,Y,EN,Y,N,A05,2025-07-18,,active
+C0114,Goh Yan Jun,1987-08-09,M,married,3,Doctor,60-100k,N,ZH,Y,N,,2024-07-01,Child entering university 2027,active
+C0115,Daniel Fernandez,1978-11-05,M,married,0,Lawyer,60-100k,N,ZH,N,Y,,2024-08-15,,active
+C0116,Nadia bin Abdullah,1980-06-04,F,married,0,Logistics Supervisor,30-60k,N,EN,N,N,A04,2024-08-21,,active
+C0117,Lee Ming Mei,1989-10-17,M,single,0,Business Owner,>250k,N,EN,Y,N,A04,2024-03-06,Diagnosed with hypertension (per servicing call),active
+C0118,Chua Jun Jun,1959-06-01,F,single,2,Hawker Stall Owner,<30k,N,ZH,Y,N,,2024-12-19,Relocating to Australia Q1 2027,active
+C0119,Koh MEI LING,1983-07-03,F,married,2,Admin Executive,60-100k,N,EN,N,N,A04,2026-04-19,,active

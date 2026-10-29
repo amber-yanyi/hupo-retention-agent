@@ -1,0 +1,9 @@
+advisor_id,name,agency_unit,tenure_years,status,rnf_licence,languages,role
+A01,Tan Wei Ling,Alpha Unit,11,active,active,EN;ZH,Financial Consultant
+A02,Muhammad Haziq,Alpha Unit,6,active,active,EN;MS,Financial Consultant
+A03,Priya Raghavan,Alpha Unit,3,active,active,EN;TA,Financial Consultant
+A04,Ong Jun Hao,Bravo Unit,1,active,active,EN;ZH,Financial Consultant
+A05,Sarah Lim,Bravo Unit,14,active,active,EN,Unit Manager
+A06,Kevin Goh,Bravo Unit,4,active,suspended,EN;ZH,Financial Consultant
+A07,Rachel Ng,Alpha Unit,8,departed,ceased,EN;ZH,Financial Consultant
+A08,Daniel Fernandez,Bravo Unit,2,active,active,EN,Financial Consultant

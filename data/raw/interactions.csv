@@ -1,0 +1,161 @@
+interaction_id,client_id,advisor_id,date,channel,interaction_type,outcome_notes
+I0001,C0030,A01,2025-09-02,phone,servicing_call,"No answer, left message"
+I0002,C0017,A01,2025-09-07,phone,annual_review,Completed
+I0003,C0081,A01,2025-09-08,in_person,annual_review,Completed
+I0004,C0102,A07,2025-09-08,email,annual_review,"No answer, left message"
+I0005,C0102,A07,2025-09-08,in_person,servicing_call,Discussed coverage; no action
+I0006,C0062,A04,2025-09-10,email,policy_change,Client requested callback
+I0007,C0067,A04,2025-09-10,phone,payment_reminder,Client requested callback
+I0008,C0112,A07,2025-09-13,whatsapp,policy_change,Discussed coverage; no action
+I0009,C0045,A04,2025-09-14,email,servicing_call,Client requested callback
+I0010,C0003,A01,2025-09-15,email,servicing_call,Discussed coverage; no action
+I0011,C0062,A04,2025-09-19,in_person,servicing_call,Discussed coverage; no action
+I0012,C0089,A01,2025-09-20,in_person,servicing_call,Discussed coverage; no action
+I0013,C0104,A01,2025-09-22,email,annual_review,"No answer, left message"
+I0014,C0042,A03,2025-09-25,email,annual_review,Updated contact details
+I0015,C0082,A06,2025-10-01,email,servicing_call,Completed
+I0016,C0010,A05,2025-10-03,in_person,claim_assistance,Updated contact details
+I0017,C0019,A04,2025-10-04,email,servicing_call,Client requested callback
+I0018,C0046,A01,2025-10-04,phone,policy_change,Client requested callback
+I0019,C0088,A08,2025-10-04,in_person,annual_review,Completed
+I0020,C0014,A01,2025-10-06,in_person,annual_review,"No answer, left message"
+I0021,C0086,A02,2025-10-10,whatsapp,servicing_call,"No answer, left message"
+I0022,C0024,A02,2025-10-17,in_person,annual_review,Completed
+I0023,C0085,A01,2025-10-20,phone,birthday_greeting,"No answer, left message"
+I0024,C0027,A03,2025-10-24,email,payment_reminder,"No answer, left message"
+I0025,C0012,A01,2025-10-25,email,servicing_call,Updated contact details
+I0026,C0032,A03,2025-10-25,email,payment_reminder,"No answer, left message"
+I0027,C0118,A07,2025-10-27,whatsapp,annual_review,Discussed coverage; no action
+I0028,C0076,A07,2025-10-28,in_person,policy_change,Updated contact details
+I0029,C0052,A05,2025-10-29,in_person,policy_change,Client requested callback
+I0030,C0113,A05,2025-10-29,phone,payment_reminder,Updated contact details
+I0031,C0032,A03,2025-11-02,in_person,claim_assistance,Client requested callback
+I0032,C0008,A03,2025-11-04,email,birthday_greeting,Discussed coverage; no action
+I0033,C0018,A05,2025-11-08,phone,claim_assistance,Discussed coverage; no action
+I0034,C0013,A03,2025-11-11,whatsapp,policy_change,Completed
+I0035,C0109,A01,2025-11-12,whatsapp,policy_change,Client requested callback
+I0036,C0036,A01,2025-11-13,whatsapp,annual_review,Discussed coverage; no action
+I0037,C0078,A05,2025-11-15,whatsapp,servicing_call,Updated contact details
+I0038,C0012,A01,2025-11-16,in_person,servicing_call,Updated contact details
+I0039,C0058,A06,2025-11-19,whatsapp,payment_reminder,Updated contact details
+I0040,C0106,A01,2025-11-20,in_person,birthday_greeting,"No answer, left message"
+I0041,C0107,A05,2025-11-26,email,birthday_greeting,Client requested callback
+I0042,C0037,A01,2025-11-27,whatsapp,payment_reminder,"No answer, left message"
+I0043,C0079,A07,2025-11-30,email,policy_change,"No answer, left message"
+I0044,C0031,A01,2025-12-01,in_person,claim_assistance,"No answer, left message"
+I0045,C0099,A01,2025-12-04,in_person,annual_review,Updated contact details
+I0046,C0110,A06,2025-12-06,email,servicing_call,Client requested callback
+I0047,C0035,A01,2025-12-10,email,policy_change,Client requested callback
+I0048,C0027,A03,2025-12-13,phone,servicing_call,Updated contact details
+I0049,C0107,A05,2025-12-13,in_person,servicing_call,Completed
+I0050,C0015,A03,2025-12-19,in_person,payment_reminder,Discussed coverage; no action
+I0051,C0069,A06,2025-12-20,whatsapp,claim_assistance,Updated contact details
+I0052,C0007,A06,2025-12-21,whatsapp,annual_review,Completed
+I0053,C0082,A06,2025-12-21,phone,claim_assistance,Client requested callback
+I0054,C0057,A04,2025-12-22,phone,policy_change,Discussed coverage; no action
+I0055,C0050,A03,2025-12-29,email,servicing_call,"No answer, left message"
+I0056,C0068,A02,2025-12-31,email,servicing_call,Client requested callback
+I0057,C0084,A03,2026-01-02,email,claim_assistance,Completed
+I0058,C0011,A01,2026-01-03,in_person,birthday_greeting,Completed
+I0059,C0063,A01,2026-01-07,email,policy_change,Updated contact details
+I0060,C0078,A05,2026-01-13,phone,servicing_call,Discussed coverage; no action
+I0061,C0048,A01,2026-01-14,phone,birthday_greeting,Completed
+I0062,C0048,A01,2026-01-18,whatsapp,annual_review,Completed
+I0063,C0037,A01,2026-01-23,email,servicing_call,Discussed coverage; no action
+I0064,C0061,A02,2026-01-24,email,policy_change,Client requested callback
+I0065,C0005,A01,2026-01-25,email,payment_reminder,Client requested callback
+I0066,C0002,A06,2026-01-29,email,claim_assistance,Client requested callback
+I0067,C0108,A05,2026-01-29,in_person,annual_review,Completed
+I0068,C0004,A01,2026-02-05,whatsapp,servicing_call,"No answer, left message"
+I0069,C0035,A01,2026-02-07,email,payment_reminder,Updated contact details
+I0070,C0043,A03,2026-02-09,whatsapp,annual_review,Discussed coverage; no action
+I0071,C0116,A04,2026-02-09,email,annual_review,Updated contact details
+I0072,C0103,A03,2026-02-11,in_person,payment_reminder,Updated contact details
+I0073,C0057,A04,2026-02-13,email,policy_change,Updated contact details
+I0074,C0092,A07,2026-02-15,whatsapp,annual_review,Updated contact details
+I0075,C0020,A01,2026-02-20,email,servicing_call,Client requested callback
+I0076,C0085,A01,2026-02-22,in_person,policy_change,"No answer, left message"
+I0077,C0066,A01,2026-02-24,email,servicing_call,Client requested callback
+I0078,C0027,A03,2026-02-26,phone,birthday_greeting,"No answer, left message"
+I0079,C0036,A01,2026-03-04,email,payment_reminder,Completed
+I0080,C0014,A01,2026-03-08,email,policy_change,Updated contact details
+I0081,C0018,A05,2026-03-09,phone,policy_change,Client requested callback
+I0082,C0032,A03,2026-03-09,phone,policy_change,Completed
+I0083,C0069,A06,2026-03-09,email,claim_assistance,Updated contact details
+I0084,C0013,A03,2026-03-13,email,servicing_call,Discussed coverage; no action
+I0085,C0100,A06,2026-03-16,whatsapp,servicing_call,Client requested callback
+I0086,C0092,A07,2026-03-18,in_person,birthday_greeting,Updated contact details
+I0087,C0010,A05,2026-03-19,whatsapp,servicing_call,Client requested callback
+I0088,C0069,A06,2026-03-19,phone,claim_assistance,Discussed coverage; no action
+I0089,C0095,A07,2026-03-20,email,birthday_greeting,Completed
+I0090,C0071,A05,2026-03-21,whatsapp,servicing_call,Discussed coverage; no action
+I0091,C0066,A01,2026-03-23,whatsapp,servicing_call,"No answer, left message"
+I0092,C0112,A07,2026-03-23,email,claim_assistance,"No answer, left message"
+I0093,C0045,A04,2026-03-30,email,servicing_call,Discussed coverage; no action
+I0094,C0053,A02,2026-04-03,in_person,annual_review,Updated contact details
+I0095,C0039,A08,2026-04-07,whatsapp,annual_review,Client requested callback
+I0096,C0044,A08,2026-04-10,phone,annual_review,Completed
+I0097,C0101,A08,2026-04-14,email,birthday_greeting,"No answer, left message"
+I0098,C0106,A01,2026-04-14,whatsapp,birthday_greeting,Completed
+I0099,C0108,A05,2026-04-20,in_person,servicing_call,"No answer, left message"
+I0100,C0040,A01,2026-04-21,whatsapp,annual_review,Discussed coverage; no action
+I0101,C0015,A03,2026-04-22,phone,birthday_greeting,"No answer, left message"
+I0102,C0034,A01,2026-04-24,whatsapp,annual_review,Client requested callback
+I0103,C0052,A05,2026-04-25,in_person,servicing_call,Discussed coverage; no action
+I0104,C0081,A01,2026-04-25,in_person,payment_reminder,"No answer, left message"
+I0105,C0082,A06,2026-04-26,phone,annual_review,Completed
+I0106,C0008,A03,2026-04-28,email,servicing_call,Client requested callback
+I0107,C0001,A01,2026-04-29,phone,policy_change,Updated contact details
+I0108,C0049,A01,2026-04-29,email,claim_assistance,Client requested callback
+I0109,C0096,A04,2026-04-30,phone,policy_change,Client requested callback
+I0110,C0109,A01,2026-05-12,phone,annual_review,Updated contact details
+I0111,C0095,A07,2026-05-15,email,servicing_call,Client requested callback
+I0112,C0031,A01,2026-05-18,in_person,servicing_call,Discussed coverage; no action
+I0113,C0035,A01,2026-05-23,in_person,claim_assistance,Updated contact details
+I0114,C0114,A07,2026-05-31,email,policy_change,Completed
+I0115,C0029,A05,2026-06-03,phone,policy_change,Discussed coverage; no action
+I0116,C0009,A08,2026-06-08,email,policy_change,Client requested callback
+I0117,C0034,A01,2026-06-10,phone,policy_change,Discussed coverage; no action
+I0118,C0025,A02,2026-06-21,whatsapp,annual_review,Discussed coverage; no action
+I0119,C0077,A07,2026-06-22,in_person,annual_review,Client requested callback
+I0120,C0050,A03,2026-06-28,email,annual_review,Updated contact details
+I0121,C0041,A05,2026-07-01,in_person,claim_assistance,Client requested callback
+I0122,C0092,A07,2026-07-04,whatsapp,servicing_call,Completed
+I0123,C0015,A03,2026-07-05,in_person,payment_reminder,Completed
+I0124,C0061,A02,2026-07-11,email,birthday_greeting,Updated contact details
+I0125,C0021,A08,2026-07-12,whatsapp,servicing_call,Completed
+I0126,C0071,A05,2026-07-16,in_person,annual_review,Discussed coverage; no action
+I0127,C0055,A07,2026-07-18,whatsapp,birthday_greeting,Updated contact details
+I0128,C0118,A07,2026-07-18,in_person,payment_reminder,Client requested callback
+I0129,C0018,A05,2026-07-20,phone,claim_assistance,Death claim submitted by next of kin; claim settled 22 Jul
+I0130,C0054,A06,2026-07-21,in_person,policy_change,"No answer, left message"
+I0131,C0086,A02,2026-07-21,whatsapp,servicing_call,Completed
+I0132,C0010,A05,2026-07-22,whatsapp,policy_change,Updated contact details
+I0133,C0055,A07,2026-07-22,in_person,policy_change,Updated contact details
+I0134,C0119,A04,2026-07-24,phone,servicing_call,Discussed coverage; no action
+I0135,C0117,A04,2026-07-29,email,servicing_call,Client requested callback
+I0136,C0031,A01,2026-07-30,email,birthday_greeting,Updated contact details
+I0137,C0042,A03,2026-07-31,whatsapp,annual_review,Discussed coverage; no action
+I0138,C0102,A07,2026-07-31,whatsapp,birthday_greeting,"No answer, left message"
+I0139,C0040,A01,2026-08-02,whatsapp,annual_review,"No answer, left message"
+I0140,C0118,A07,2026-08-04,email,annual_review,Discussed coverage; no action
+I0141,C0005,A01,2026-08-05,in_person,annual_review,Client declined CI discussion; asked not to be approached about new products until 2027
+I0142,C0008,A03,2026-08-07,in_person,annual_review,Client declined CI discussion; asked not to be approached about new products until 2027
+I0143,C0087,A02,2026-08-19,whatsapp,annual_review,Client requested callback
+I0144,C0084,A03,2026-08-20,in_person,servicing_call,Client requested callback
+I0145,C0085,A01,2026-08-20,email,servicing_call,"No answer, left message"
+I0146,C0090,A07,2026-08-21,in_person,birthday_greeting,Updated contact details
+I0147,C0096,A04,2026-08-22,in_person,annual_review,Updated contact details
+I0148,C0006,A01,2026-08-22,in_person,annual_review,Client declined CI discussion; asked not to be approached about new products until 2027
+I0149,C0067,A04,2026-08-26,whatsapp,servicing_call,Client requested callback
+I0150,C0100,A06,2026-08-26,email,payment_reminder,Completed
+I0151,C0062,A04,2026-08-30,email,complaint,OPEN — client disputes surrender value quoted; escalated to Customer Care ref CC-2026-0871
+I0152,C0074,A05,2026-08-30,in_person,claim_assistance,CI claim paid; client undergoing treatment. Handle with care.
+I0153,C0009,A08,2026-08-31,email,policy_change,Discussed coverage; no action
+I0154,C0003,A01,2026-09-05,phone,lapse_follow_up,Discussed missed premium on P0007; client to update GIRO by 2026-09-18
+I0155,C0036,A01,2026-09-06,phone,lapse_follow_up,Discussed missed premium on P0073; client to update GIRO by 2026-09-18
+I0156,C0053,A02,2026-09-06,phone,lapse_follow_up,Discussed missed premium on P0108; client to update GIRO by 2026-09-18
+I0157,C0045,A04,2026-09-07,phone,lapse_follow_up,Discussed missed premium on P0091; client to update GIRO by 2026-09-18
+I0158,C0054,A06,2026-09-07,phone,lapse_follow_up,Discussed missed premium on P0109; client to update GIRO by 2026-09-18
+I0159,C0021,A08,2026-09-09,phone,lapse_follow_up,Discussed missed premium on P0044; client to update GIRO by 2026-09-18
+I0160,C0005,A01,2026-09-10,phone,lapse_follow_up,Discussed missed premium on P0013; client to update GIRO by 2026-09-18
