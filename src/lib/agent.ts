@@ -4,6 +4,7 @@ import { z } from "zod";
 import { ACTION_CATALOG, ESCALATION_LABEL, RULES, buildEnvelope, unitManagerFor } from "./governance";
 import { renderReminder, TEMPLATE_ID } from "./templates";
 import { dispatch } from "./mock";
+import { recentAgentReminders } from "./store";
 import { AS_OF, addDays } from "./dates";
 import type { ActionType, AgentAction, Book, Client, ClientDecision, Envelope, EscalationTarget, Run } from "./types";
 
@@ -244,13 +245,15 @@ export async function runAgent(book: Book, scope: string, scopeLabel: string, cl
   };
   emit({ type: "run_started", run: { id: run.id, scope, scope_label: scopeLabel, model: MODEL }, total: clients.length });
 
+  // Idempotent re-runs: don't re-send reminders this agent already sent (eval runs start clean).
+  const sent = process.env.AGENT_DRY_RUN ? new Map<string, string>() : recentAgentReminders();
   const queue = [...clients];
   const deferred: Client[] = [];
   async function worker(final = false) {
     const source = final ? deferred : queue;
     for (let c = source.shift(); c; c = source.shift()) {
       emit({ type: "client_started", client_id: c.client_id, client_name: c.full_name });
-      const env = buildEnvelope(book, c);
+      const env = buildEnvelope(book, c, sent);
       const t0 = Date.now();
       let decision: ClientDecision;
       let actions: AgentAction[];

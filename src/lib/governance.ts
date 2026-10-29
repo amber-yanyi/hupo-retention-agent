@@ -77,7 +77,8 @@ export const RULES: { code: string; label: string; when: string; effect: string 
 
 const INCOME_MID: Record<string, number> = { "<30k": 25000, "30-60k": 45000, "60-100k": 80000, "100-150k": 125000, "150-250k": 200000, ">250k": 300000 };
 
-export function buildEnvelope(book: Book, c: Client): Envelope {
+// agentReminders: policy_id -> date the agent itself last sent a reminder (from earlier runs).
+export function buildEnvelope(book: Book, c: Client, agentReminders: Map<string, string> = new Map()): Envelope {
   const guards: Guard[] = [];
   const signals: Signal[] = [];
   const advisor = book.advisors.find((a) => a.advisor_id === c.servicing_advisor_id) ?? null;
@@ -147,6 +148,7 @@ export function buildEnvelope(book: Book, c: Client): Envelope {
       if (promisedBy && promisedBy >= AS_OF && p.lapse_date && promisedBy < p.lapse_date)
         reason = `Snoozed: client committed on ${promise!.date} to fix payment by ${promisedBy} (lapse ${p.lapse_date}) (PROMISE_TO_PAY)`;
       else if (reminded) reason = `Snoozed: ${reminded.interaction_type.replace(/_/g, " ")} on ${reminded.date} (RECENTLY_REMINDED)`;
+      else if (agentReminders.has(p.policy_id)) reason = `Snoozed: agent already sent a reminder at ${agentReminders.get(p.policy_id)} (RECENTLY_REMINDED)`;
     }
     reminderEligibility.push({ policy_id: p.policy_id, eligible: !reason, reason: reason || "Eligible: in grace, no blocking guard, not recently contacted" });
   }

@@ -54,7 +54,7 @@ const STATUS_LABEL: Record<AgentAction["status"], string> = {
 const sgd = (n: number) => `SGD ${Math.round(n).toLocaleString("en-SG")}`;
 const fmtDate = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 
-interface Live { running: boolean; total: number; done: number; inFlight: string[]; feed: { id: number; text: string; tone: "info" | "ok" | "warn" }[] }
+interface Live { running: boolean; total: number; done: number; inFlight: { id: string; name: string }[]; feed: { id: number; text: string; tone: "info" | "ok" | "warn" }[] }
 
 export function Dashboard({ asOf, model, scopes, issues, rules, catalog, escalationLabels }: Props) {
   const [scope, setScope] = useState("A01");
@@ -101,15 +101,15 @@ export function Dashboard({ asOf, model, scopes, issues, rules, catalog, escalat
             setLive((l) => ({ ...l, total: e.total }));
             pushFeed(`Run ${e.run.id} started — ${e.total} clients in ${e.run.scope_label}'s book · ${e.run.model}`);
           } else if (e.type === "client_started") {
-            setLive((l) => ({ ...l, inFlight: [...l.inFlight, e.client_name] }));
+            setLive((l) => ({ ...l, inFlight: [...l.inFlight.filter((f) => f.id !== e.client_id), { id: e.client_id, name: e.client_name }] }));
           } else if (e.type === "client_done") {
-            setLive((l) => ({ ...l, done: l.done + 1, inFlight: l.inFlight.filter((n) => n !== e.decision.client_name) }));
+            setLive((l) => ({ ...l, done: l.done + 1, inFlight: l.inFlight.filter((f) => f.id !== e.decision.client_id) }));
             setDecisions((d) => [...d, e.decision]);
             setActions((a) => [...a, ...e.actions]);
             const blocked = e.actions.filter((a) => a.status === "blocked").length;
             const n = e.actions.length - blocked;
             pushFeed(
-              `${e.decision.client_name}: ${e.decision.model_called ? e.decision.summary : "no signals — skipped model"}${n ? ` · ${n} action${n > 1 ? "s" : ""}` : ""}${blocked ? ` · ${blocked} blocked by guardrail` : ""}`,
+              `${e.decision.client_name} (${e.decision.client_id}): ${e.decision.model_called ? e.decision.summary.replace(new RegExp(`^${e.decision.client_name}:\\s*`), "") : "no signals — skipped model"}${n ? ` · ${n} action${n > 1 ? "s" : ""}` : ""}${blocked ? ` · ${blocked} blocked by guardrail` : ""}`,
               blocked || e.decision.model_error ? "warn" : n ? "ok" : "info",
             );
           } else if (e.type === "run_finished") {
@@ -308,7 +308,7 @@ function LivePanel({ live }: { live: Live }) {
       {live.inFlight.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5 border-b border-zinc-100 px-4 py-2 text-xs text-zinc-500">
           <Loader2 className="size-3 animate-spin" /> Deciding:
-          {live.inFlight.map((n) => <span key={n} className="rounded bg-zinc-100 px-1.5 py-0.5 text-zinc-700">{n}</span>)}
+          {live.inFlight.map((f) => <span key={f.id} className="rounded bg-zinc-100 px-1.5 py-0.5 text-zinc-700">{f.name}</span>)}
         </div>
       )}
       <div className="max-h-40 overflow-y-auto px-4 py-2 font-mono text-[11.5px] leading-5">

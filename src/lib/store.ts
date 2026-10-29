@@ -55,3 +55,14 @@ export function recordMockCall(endpoint: string, payload: unknown) {
 export function mockCalls() {
   return load().mockCalls;
 }
+
+// Reminders the agent already sent (or an advisor approved) in the last 7 days, by policy.
+export function recentAgentReminders(): Map<string, string> {
+  const cutoff = Date.now() - 7 * 86_400_000;
+  const out = new Map<string, string>();
+  for (const run of load().runs)
+    for (const a of run.actions)
+      if (a.type === "send_payment_reminder" && a.policy_id && a.executed_at && Date.parse(a.executed_at) > cutoff && !out.has(a.policy_id))
+        out.set(a.policy_id, new Date(a.executed_at).toLocaleString("en-SG"));
+  return out;
+}
